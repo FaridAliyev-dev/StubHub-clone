@@ -1,5 +1,15 @@
-import { products } from "./data.js";
+async function fetchProducts() {
+  try {
+    const response = await fetch("https://events-managament-crud.vercel.app/tickets");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return [];
+  }
+}
 
+const products = await fetchProducts();
 const card = document.querySelector(".productsBox");
 const bestSellersBox = document.querySelector(".bestSellersBox");
 const discountedProductsBox = document.querySelector(".discountedProductsBox");
