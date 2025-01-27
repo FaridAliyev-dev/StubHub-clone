@@ -226,3 +226,109 @@
   color: #767676;
   font-weight: 550;
 }
+
+
+/* APP START */
+
+.app {
+  width: 100%;
+  background-color: #F2EBFB;
+  padding: 60px 40px;
+  border-radius: 20px;
+}
+
+.appItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appStores {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+
+
+/* FOOTER START */
+footer {
+  color: #333;
+  padding: 20px 40px;
+  border-top: 1px solid #ddd;
+  margin-top: 50px;
+}
+
+/* Top Section */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  width: 22%;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #667382;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.footer-section li a {
+  text-decoration: none;
+  color: #0070d1;
+  
+}
+
+.footer-section li:hover {
+  transform: scale(1.05);
+
+}
+
+.footer-select select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 20px;
+
+}
+
+.footer-bottom a {
+  color: #0070d1;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+
+option {
+  margin: 10px;
+}
