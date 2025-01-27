@@ -26,7 +26,6 @@
 }
 
 /* HEADER START */
-
 .headerItems {
   display: flex;
   justify-content: space-between;
@@ -115,7 +114,7 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  border-radius: 15px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -185,10 +184,17 @@
 
 /* CARDS */
 
-.trendingText {
+.trending,
+.allEvents {
+  margin-bottom: 50px;
+}
+
+.trendingText,
+.allEventsText {
   margin-bottom: 20px;
 }
-.cardsContainer {
+.cardsContainer,
+.AllEventCardsContainer {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -198,12 +204,12 @@
 }
 
 .card {
-  flex: 0 0 300px;
-  max-width: 300px;
-  display: inline-block;
-  vertical-align: top;
-  
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  max-width: calc(25% - 20px);
+  cursor: pointer;
 }
+
 .card img {
   width: 100%;
   height: 200px;
@@ -215,9 +221,8 @@
   font-size: 18px;
 }
 
-
 .card p {
-      font-size: 15px;
-      color: #767676;
-      font-weight: 550;
+  font-size: 15px;
+  color: #767676;
+  font-weight: 550;
 }
