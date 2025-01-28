@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StubHub</title>
-    <link rel="stylesheet" href="./style/style.css" />
     <link
       rel="icon"
       href="./assets/icons/StubHubLogo.svg"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./style/responsive/appResponsive.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <!-- HEADER TOP START -->
@@ -24,30 +25,39 @@
     <!-- HEADER START -->
     <header class="header">
       <div class="container">
-        <div class="headerItems">
-          <div class="headerFirst">
-            <img src="./assets/icons/StubHubLogo.svg" alt="StubHub Logo" />
+        <div class="header-top">
+          <img
+            src="./assets/icons/StubHubLogo.svg"
+            alt="StubHub Logo"
+            class="logo"
+          />
 
-            <a href="#">Sports</a>
-            <a href="#">Concerts</a>
-            <a href="#">Theater</a>
-            <a href="#">Festivals</a>
-            <a href="#">Cities</a>
-          </div>
-
-          <div class="headerSecond">
-            <a href="#">Gift Cards</a>
-            <a href="#">Explore</a>
-            <a href="#">Sell</a>
-            <a href="#">Favorites</a>
-            <a href="#">My Tickets</a>
-
-            <a href="#" class="sign-in">Sign In</a>
-            <div class="user-icon">U</div>
-          </div>
+          <button class="hamburger" id="hamburger-menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+          </button>
         </div>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#">Festivals</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">My Tickets</a></li>
+            <li><a href="#" class="sign-in">Sign In</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+
+    <script>
+      const hamburger = document.getElementById("hamburger-menu");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
     <!-- HEADER END -->
 
     <!-- MAIN SECTION START -->
@@ -236,7 +246,10 @@
       </div>
     </footer>
     <!-- FOOTER END  -->
-    <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css" >
+    <link
+      rel="stylesheet"
+      href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css"
+    />
     <script src="./src/main.js"></script>
   </body>
 </html>

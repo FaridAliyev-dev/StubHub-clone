@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  .appItems {
+    display: flex;
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .appText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+  }
+
+  .appStores {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+}
