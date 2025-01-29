@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px !important;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px !important;
+
+  }
+
+  .slide img {
+    border-radius: 20px;
+    height: 250px;
+    width: 300px !important;
+  }
+}
