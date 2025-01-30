@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+  .footer-top {
+    display: none !important;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid white !important;
+  }
+}
