@@ -2,48 +2,108 @@
   "users": [
     {
       "id": 1,
-      "userId": 2,
-      "eventId": 1,
-      "quantity": 2,
-      "price": 100,
-      "purchaseDate": "2024-11-10T15:30:00Z",
-      "ticketCode": "TK-001-AB12X"
+      "role": "admin",
+      "username": "admin_tech",
+      "email": "admin_tech@example.com",
+      "password": "hashed_password_1",
+      "balance": 500,
+      "profilePictureURL": "https://example.com/images/admin-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 1
+        },
+        {
+          "id": 2,
+          "eventId": 2
+        }
+      ],
+      "accountCreationDate": "2022-01-01",
+      "totalSpentMoney": 0
     },
     {
       "id": 2,
-      "userId": 3,
-      "eventId": 2,
-      "quantity": 1,
-      "price": 80,
-      "purchaseDate": "2024-11-12T10:00:00Z",
-      "ticketCode": "TK-002-CD34Y"
+      "role": "client",
+      "username": "johnny_events",
+      "email": "johnny@example.com",
+      "password": "hashed_password_2",
+      "balance": 150,
+      "profilePictureURL": "https://example.com/images/johnny-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 3
+        },
+        {
+          "id": 2,
+          "eventId": 4
+        }
+      ],
+      "accountCreationDate": "2023-05-15",
+      "totalSpentMoney": 80
     },
     {
       "id": 3,
-      "userId": 4,
-      "eventId": 3,
-      "quantity": 3,
-      "price": 120,
-      "purchaseDate": "2024-11-14T12:00:00Z",
-      "ticketCode": "TK-003-EF56Z"
+      "role": "client",
+      "username": "mike_attendee",
+      "email": "mike@example.com",
+      "password": "hashed_password_3",
+      "balance": 75,
+      "profilePictureURL": "https://example.com/images/mike-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 1
+        },
+        {
+          "id": 2,
+          "eventId": 2
+        }
+      ],
+      "accountCreationDate": "2023-07-12",
+      "totalSpentMoney": 50
     },
     {
       "id": 4,
-      "userId": 5,
-      "eventId": 4,
-      "quantity": 1,
-      "price": 90,
-      "purchaseDate": "2024-11-15T18:30:00Z",
-      "ticketCode": "TK-004-GH78A"
+      "role": "client",
+      "username": "jenny_tech",
+      "email": "jenny@example.com",
+      "password": "hashed_password_4",
+      "balance": 120,
+      "profilePictureURL": "https://example.com/images/jenny-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 3
+        },
+        {
+          "id": 2,
+          "eventId": 5
+        }
+      ],
+      "accountCreationDate": "2022-03-01",
+      "totalSpentMoney": 110
     },
     {
       "id": 5,
-      "userId": 2,
-      "eventId": 5,
-      "quantity": 2,
-      "price": 130,
-      "purchaseDate": "2024-11-16T09:00:00Z",
-      "ticketCode": "TK-005-IJ90B"
+      "role": "client",
+      "username": "susan_smith",
+      "email": "susan@example.com",
+      "password": "hashed_password_5",
+      "balance": 200,
+      "profilePictureURL": "https://example.com/images/susan-profile.jpg",
+      "favorites": [
+        {
+          "id": 1,
+          "eventId": 4
+        },
+        {
+          "id": 2,
+          "eventId": 5
+        }
+      ],
+      "accountCreationDate": "2021-09-20",
+      "totalSpentMoney": 250
     }
   ],
 
@@ -189,3 +249,4 @@
     }
   ]
 }
+

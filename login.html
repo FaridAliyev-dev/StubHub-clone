@@ -103,47 +103,62 @@
     </form>
 
     <script>
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("loginForm");
+        console.log(form);
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault(); // Prevent form submission
+
           const username = document.getElementById("username").value;
           const password = document.getElementById("password").value;
 
-          const user = localStorage.getItem(username);
+          fetch("http://localhost:3000/users")
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              let users = data;
+              let userFound = false;
 
-          if (user) {
-            const parsedUser = JSON.parse(user);
-            if (parsedUser.password === password) {
-              localStorage.setItem("user", JSON.stringify(parsedUser));
-              window.location.href = "index.html";
-            } else {
-              const passwordInput = document.getElementById("password");
-              passwordInput.style.border = "1px solid red";
-              const errorMessage = document.createElement("p");
-              errorMessage.textContent = "Incorrect username or password";
-              errorMessage.style.color = "red";
-              errorMessage.id = "error-message";
-              const existingErrorMessage =
-                document.getElementById("error-message");
-              if (!existingErrorMessage) {
-                passwordInput.parentNode.appendChild(errorMessage);
+              users.forEach((user) => {
+                if (user.username === username && user.password === password) {
+                  userFound = true;
+                  localStorage.setItem("user", JSON.stringify(user));
+
+                  Swal.fire({
+                    title: "Login Successful!",
+                    text: "Redirecting...",
+                    icon: "success",
+                    timer: 2000,
+                    showConfirmButton: false,
+                  }).then(() => {
+                    window.location.href = "index.html";
+                  });
+                }
+              });
+
+              if (!userFound) {
+                Swal.fire({
+                  title: "Login Failed",
+                  text: "Incorrect username or password",
+                  icon: "error",
+                  confirmButtonText: "Try Again",
+                });
               }
-            }
-          } else {
-            const usernameInput = document.getElementById("username");
-            usernameInput.style.border = "1px solid red";
-            const errorMessage = document.createElement("p");
-            errorMessage.textContent = "Incorrect username or password";
-            errorMessage.style.color = "red";
-            errorMessage.id = "error-message";
-            const existingErrorMessage =
-              document.getElementById("error-message");
-            if (!existingErrorMessage) {
-              usernameInput.parentNode.appendChild(errorMessage);
-            }
-          }
+            })
+            .catch((error) => {
+              console.error("Error loading user data:", error);
+
+              Swal.fire({
+                title: "Error",
+                text: "Could not connect to server. Please try again later.",
+                icon: "error",
+                confirmButtonText: "OK",
+              });
+            });
         });
+      });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

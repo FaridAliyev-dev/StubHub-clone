@@ -101,39 +101,51 @@
     </form>
 
     <script>
-      document
-        .getElementById("registerForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const name = document.getElementById("name").value;
-          const username = document.getElementById("username").value;
-          const password = document.getElementById("password").value;
-          const confirmPassword =
-            document.getElementById("confirmPassword").value;
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
 
-          if (password !== confirmPassword) {
-            document.getElementById("password").style.border = "1px solid red";
-            document.getElementById("confirmPassword").style.border =
-              "1px solid red";
-            let errorMessage = document.createElement("p");
-            errorMessage.textContent = "Passwords do not match";
-            errorMessage.style.color = "red";
-            errorMessage.id = "error-message";
-            if (!document.getElementById("error-message")) {
-              document.getElementById("registerForm").appendChild(errorMessage);
+            const name = document.getElementById("name").value;
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword =
+              document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+              // Show error alert for password mismatch
+              Swal.fire({
+                title: "Error",
+                text: "Passwords do not match",
+                icon: "error",
+                confirmButtonText: "Try Again",
+              });
+              return;
             }
-            return;
-          }
 
-          const user = {
-            name: name,
-            username: username,
-            password: password,
-          };
+            const user = {
+              name: name,
+              username: username,
+              password: password,
+            };
 
-          localStorage.setItem(username, JSON.stringify(user));
-          window.location.href = "login.html";
-        });
+            localStorage.setItem(username, JSON.stringify(user));
+
+            // Success alert
+            Swal.fire({
+              title: "Registration Successful!",
+              text: "Redirecting to login page...",
+              icon: "success",
+              timer: 2000,
+              showConfirmButton: false,
+            }).then(() => {
+              window.location.href = "login.html";
+            });
+          });
+      });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

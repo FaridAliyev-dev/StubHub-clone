@@ -51,3 +51,9 @@ fetch("http://localhost:3000/tickets")
     avaliableTickets.innerHTML = cardsHTML;
   })
   .catch((error) => console.error("Error fetching events:", error));
+
+
+  
+
+
+  
