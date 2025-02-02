@@ -11,6 +11,47 @@
     />
     <link rel="stylesheet" href="./style/responsive/footerResponsive.css" />
     <link rel="stylesheet" href="./style/style.css" />
+
+    <style>
+      .main {
+        margin-top: 50px;
+      }
+
+      .box {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .main {
+        min-height: 60vh;
+      }
+
+      .card {
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .cardContent {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 1100px) {
+        .box {
+          justify-content: center;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- HEADER TOP START -->
@@ -51,7 +92,6 @@
         </nav>
       </div>
     </header>
-
     <script>
       const hamburger = document.getElementById("hamburger-menu");
       const navMenu = document.getElementById("nav-menu");
@@ -63,6 +103,11 @@
     <!-- HEADER END -->
 
     <!-- MAIN START -->
+    <div class="main">
+      <div class="container">
+        <div class="box"></div>
+      </div>
+    </div>
     <!-- MAIN END -->
 
     <!-- FOOTER START -->
@@ -141,5 +186,7 @@
       </div>
     </footer>
     <!-- FOOTER END  -->
+
+    <script src="./src/events.js"></script>
   </body>
 </html>
