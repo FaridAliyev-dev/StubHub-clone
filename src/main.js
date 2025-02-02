@@ -59,7 +59,7 @@ if (localStorage.getItem("user")) {
 
   nav.innerHTML = `
             <ul class="nav-list">
-            <li><a href="#">Festivals</a></li>
+            <li><a href="#">Events</a></li>
             <li><a href="#">Favorites</a></li>
             <li><a href="#">My Tickets</a></li>
             <li style="display: flex; flex-direction: row; ">
