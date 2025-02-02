@@ -3,6 +3,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+    <link
+      rel="icon"
+      href="./assets/icons/StubHubLogo.svg"
+      type="image/x-icon"
+    />
     <style>
       * {
         font-family: "Roboto", sans-serif;
@@ -16,22 +21,22 @@
         justify-content: center;
         align-items: center;
         background-color: #f5f8f9;
+        height: 100vh;
       }
       form {
         display: flex;
         flex-direction: column;
         width: 400px;
-        padding: 80px 20px;
+        padding: 40px 20px;
         background-color: white;
         border-radius: 15px;
         gap: 15px;
-        margin: 15px;
         text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       input {
         width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
+        padding: 12px;
         border-radius: 10px;
         border: 1px solid #b1bac2;
         transition: 0.3s ease-in-out;
@@ -44,24 +49,17 @@
 
       button {
         width: 100%;
-        padding: 15px;
+        padding: 12px;
         border-radius: 10px;
         cursor: pointer;
         background-color: #5d29ba;
         color: white;
-        border: 1px solid #5d29ba;
+        border: none;
         transition: 0.3s ease-in-out;
       }
 
       button:hover {
         background-color: #48218b;
-      }
-
-      #registerForm {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
       }
 
       a {
@@ -71,15 +69,7 @@
       }
 
       a:hover {
-        transform: scale(1.1);
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        text-align: center;
+        transform: scale(1.05);
       }
     </style>
   </head>
@@ -97,55 +87,79 @@
         required
       />
       <button type="submit">Register</button>
-      &nbsp;<a href="login.html">Go to Login</a>
+      <a href="login.html">Go to Login</a>
     </form>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         document
           .getElementById("registerForm")
-          .addEventListener("submit", function (event) {
+          .addEventListener("submit", async function (event) {
             event.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            const confirmPassword =
-              document.getElementById("confirmPassword").value;
+            const name = document.getElementById("name").value.trim();
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const confirmPassword = document
+              .getElementById("confirmPassword")
+              .value.trim();
 
+            // Check if passwords match
             if (password !== confirmPassword) {
-              // Show error alert for password mismatch
               Swal.fire({
                 title: "Error",
-                text: "Passwords do not match",
+                text: "Passwords do not match!",
                 icon: "error",
                 confirmButtonText: "Try Again",
               });
               return;
             }
 
-            const user = {
-              name: name,
-              username: username,
-              password: password,
-            };
+            const user = { name, username, password };
 
-            localStorage.setItem(username, JSON.stringify(user));
+            try {
+              console.log("Sending registration request:", user);
 
-            // Success alert
-            Swal.fire({
-              title: "Registration Successful!",
-              text: "Redirecting to login page...",
-              icon: "success",
-              timer: 2000,
-              showConfirmButton: false,
-            }).then(() => {
-              window.location.href = "login.html";
-            });
+              const response = await fetch("http://localhost:3000/users", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(user),
+              });
+
+              if (!response.ok) {
+                console.error(
+                  "Server responded with an error:",
+                  response.status
+                );
+                throw new Error("Failed to register user.");
+              }
+
+              const data = await response.json();
+              console.log("User registered successfully:", data);
+
+              // Swal.fire({
+              //   title: "Registration Successful!",
+              //   text: "Redirecting to login page...",
+              //   icon: "success",
+              //   timer: 2000,
+              //   showConfirmButton: false,
+              // });
+
+              console.log("Redirecting to login page...");
+
+              window.location.href = "/login.html";
+            } catch (error) {
+              console.error("Registration Error:", error);
+              Swal.fire({
+                title: "Registration Failed",
+                text: "There was an issue registering. Please try again.",
+                icon: "error",
+                confirmButtonText: "Okay",
+              });
+            }
           });
       });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

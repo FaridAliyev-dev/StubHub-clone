@@ -1,11 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Profile</title>
-</head>
-<body>
-      
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link
+      rel="icon"
+      href="./assets/icons/StubHubLogo.svg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style/responsive/footerResponsive.css" />
+    <link rel="stylesheet" href="./style/profile.css" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!-- HEADER TOP START -->
+    <div class="headerTop">
+      <p class="headerTopP">
+        StubHub is the world's top destination for ticket buyers and resellers.
+        Prices may be higher or lower than face value.
+      </p>
+    </div>
+    <!--  HEADER TOP END -->
+
+    <!-- HEADER START -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <img
+            src="./assets/icons/StubHubLogo.svg"
+            alt="StubHub Logo"
+            class="logo"
+          />
+
+          <button class="hamburger" id="hamburger-menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+          </button>
+        </div>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#">Festivals</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">My Tickets</a></li>
+            <li><a href="login.html" class="sign-in">Sign In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <script>
+      const hamburger = document.getElementById("hamburger-menu");
+      const navMenu = document.getElementById("nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
+    <!-- HEADER END -->
+
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <div class="main">
+      <div class="container">
+        <div class="mainItems">
+          <h1>Profile Dashboard</h1>
+
+          <div class="card">
+            <!-- CARD CONTENT ON PROFILE.JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MAIN END -->
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-section">
+            <img
+              src="https://img.vggcdn.net/images/Assets/Icons/bfx/fanprotect.724c822d.svg"
+              alt=""
+            />
+            <ul>
+              <li>Buy and sell with confidence</li>
+              <li>Customer service all the way to your seat</li>
+              <li>Every order is 100% guaranteed</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Our Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Affiliate Program</a></li>
+              <li><a href="#">For Developers</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Have Questions?</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">StubHub Community</a></li>
+              <li><a href="#">Gift Cards</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Live events all over the world</h3>
+            <ul class="footer-select">
+              <li>
+                <select>
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>United Kingdom</option>
+                </select>
+              </li>
+              <li>
+                <select>
+                  <option>English (US)</option>
+                  <option>Spanish</option>
+                  <option>French</option>
+                </select>
+              </li>
+              <li>
+                <select>
+                  <option>USD</option>
+                  <option>Euro</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2000-2025 StubHub. All Rights Reserved.</p>
+          <p>
+            Use of this website signifies your agreement to our
+            <a href="#">User Agreement</a>, <a href="#">Privacy Notice</a>, and
+            <a href="#">Cookie Notice</a>.
+          </p>
+          <p>
+            User Agreement change notifications
+            <a href="#">Do Not Share My Personal Information</a>/<a href="#"
+              >Your Privacy Choices</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER END  -->
+    <script src="./src/profile.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
 </html>

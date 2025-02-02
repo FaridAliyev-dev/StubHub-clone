@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "role": "admin",
       "username": "admin_tech",
       "email": "admin_tech@example.com",
@@ -22,7 +22,7 @@
       "totalSpentMoney": 0
     },
     {
-      "id": 2,
+      "id": "2",
       "role": "client",
       "username": "johnny_events",
       "email": "johnny@example.com",
@@ -43,7 +43,7 @@
       "totalSpentMoney": 80
     },
     {
-      "id": 3,
+      "id": "3",
       "role": "client",
       "username": "mike_attendee",
       "email": "mike@example.com",
@@ -64,7 +64,7 @@
       "totalSpentMoney": 50
     },
     {
-      "id": 4,
+      "id": "4",
       "role": "client",
       "username": "jenny_tech",
       "email": "jenny@example.com",
@@ -85,7 +85,7 @@
       "totalSpentMoney": 110
     },
     {
-      "id": 5,
+      "id": "5",
       "role": "client",
       "username": "susan_smith",
       "email": "susan@example.com",
@@ -104,9 +104,158 @@
       ],
       "accountCreationDate": "2021-09-20",
       "totalSpentMoney": 250
+    },
+    {
+      "id": "28ea",
+      "name": "Mufutau Hunt",
+      "username": "tovozy",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "e4cd",
+      "name": "Brennan Vincent",
+      "username": "gezytevyl",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "8ac2",
+      "name": "Karly Ferrell",
+      "username": "lyreq",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "d38d",
+      "name": "Daquan Talley",
+      "username": "wasocitybi",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "5097",
+      "name": "Lee Vincent",
+      "username": "napuxes",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "c3a4",
+      "name": "Abdul Deleon",
+      "username": "cupibuny",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "9638",
+      "name": "Aurelia Villarreal",
+      "username": "sitile",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "6419",
+      "name": "Marah Parsons",
+      "username": "cylaximab",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "5478",
+      "name": "Jane Kemp",
+      "username": "bikinafo",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "4d78",
+      "name": "Sierra Mullins",
+      "username": "rugakezi",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "3591",
+      "name": "Malcolm Spence",
+      "username": "fiwyt",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "7268",
+      "name": "Minerva Valencia",
+      "username": "supatiqewi",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "1036",
+      "name": "Xerxes Wise",
+      "username": "qapekekej",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "7044",
+      "name": "Keaton Harrington",
+      "username": "wuqixami",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "26a1",
+      "name": "Mariam Delaney",
+      "username": "rapudotyza",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "ce96",
+      "name": "Gil Ayers",
+      "username": "gylom",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "b35d",
+      "name": "Kyla Solis",
+      "username": "bakaketaw",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "793e",
+      "name": "Hilary Casey",
+      "username": "mewaha",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "0b80",
+      "name": "Shay Rowe",
+      "username": "lebyhybe",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "72d6",
+      "name": "Peter Baldwin",
+      "username": "kafyzeke",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "67af",
+      "name": "Eden Rogers",
+      "username": "goderu",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "a626",
+      "name": "Nola Espinoza",
+      "username": "hacox",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "8add",
+      "name": "Robert Smith",
+      "username": "xijunojoja",
+      "password": "Pa$$w0rd!"
+    },
+    {
+      "id": "4ac8",
+      "name": "Elnara",
+      "username": "elnara",
+      "password": "elnara"
+    },
+    {
+      "id": "98c3",
+      "name": "vugar",
+      "username": "vugar",
+      "password": "vugar"
     }
   ],
-
   "events": [
     {
       "id": "1",
@@ -177,7 +326,6 @@
       "soldTickets": 70
     }
   ],
-
   "tickets": [
     {
       "id": "1",
@@ -249,4 +397,3 @@
     }
   ]
 }
-
