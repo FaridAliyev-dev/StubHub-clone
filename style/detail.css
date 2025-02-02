@@ -45,3 +45,20 @@
       line-height: 1.6;
       gap: 10px;
 }
+
+
+@media(max-width: 768px) {
+      .detail {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+      }
+
+      .detailText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+      }
+}
