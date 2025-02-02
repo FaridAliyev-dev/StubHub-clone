@@ -23,7 +23,6 @@ fetch("http://localhost:3000/events")
     AllEventCardContainer.innerHTML = cardsHTML;
   })
   .catch((error) => console.error("Error fetching events:", error));
-
 // TICKET CARDS
 const avaliableTickets = document.querySelector(".TicketCardsContainer");
 
@@ -59,7 +58,7 @@ if (localStorage.getItem("user")) {
 
   nav.innerHTML = `
             <ul class="nav-list">
-            <li><a href="#">Events</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="#">Favorites</a></li>
             <li><a href="#">My Tickets</a></li>
             <li style="display: flex; flex-direction: row; ">

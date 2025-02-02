@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Details</title>
     <link
       rel="icon"
       href="./assets/icons/StubHubLogo.svg"
@@ -14,8 +14,8 @@
       href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css"
     />
     <link rel="stylesheet" href="./style/responsive/footerResponsive.css" />
-    <link rel="stylesheet" href="./style/profile.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/detail.css">
   </head>
   <body>
     <!-- HEADER TOP START -->
@@ -32,12 +32,13 @@
       <div class="container">
         <div class="header-top">
           <a href="index.html">
-          <img
-            src="./assets/icons/StubHubLogo.svg"
-            alt="StubHub Logo"
-            class="logo"
-          />
+            <img
+              src="./assets/icons/StubHubLogo.svg"
+              alt="StubHub Logo"
+              class="logo"
+            />
           </a>
+
           <button class="hamburger" id="hamburger-menu">
             <div class="hamburger-bar"></div>
             <div class="hamburger-bar"></div>
@@ -47,7 +48,7 @@
 
         <nav class="nav-menu" id="nav-menu">
           <ul class="nav-list">
-            <li><a href="events.html">Events</a></li>
+            <li><a href="#">Events</a></li>
             <li><a href="#">Favorites</a></li>
             <li><a href="#">My Tickets</a></li>
             <li><a href="login.html" class="sign-in">Sign In</a></li>
@@ -66,21 +67,11 @@
     </script>
     <!-- HEADER END -->
 
-    <!-- HEADER END -->
-
-    <!-- MAIN START -->
     <div class="main">
       <div class="container">
-        <div class="mainItems">
-          <h1>Profile Dashboard</h1>
-
-          <div class="card">
-            <!-- CARD CONTENT ON PROFILE.JS -->
-          </div>
-        </div>
+            <div class="detail"></div>
       </div>
     </div>
-    <!-- MAIN END -->
 
     <!-- FOOTER START -->
     <footer class="footer">
@@ -158,7 +149,6 @@
       </div>
     </footer>
     <!-- FOOTER END  -->
-    <script src="./src/profile.js"></script>
-    <script src="./src/main.js"></script>
+    <script src="./src/detail.js"></script>
   </body>
 </html>
